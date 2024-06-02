@@ -1,0 +1,39 @@
+#navbar {
+  /* From https://css.glass */
+  background: rgba(55, 128, 167, 0.161);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+#navLinks #active {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    rgba(229, 59, 58, 1) 0%,
+    rgba(229, 59, 58, 1) 50%,
+    rgba(255, 93, 93, 0) 50%
+  );
+  border-image-slice: 1;
+}
+
+.navLinks {
+  display: inline-block;
+
+  text-decoration: none;
+}
+
+.navLinks::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: rgba(229, 59, 58, 1);
+  transition: width 0.3s;
+}
+
+.navLinks:hover::after {
+  width: 50%;
+  transition: width 0.3s;
+}
