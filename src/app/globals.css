@@ -10,6 +10,12 @@
   --color1: #09488c;
   --color2: #ec1c24;
   --color3: #1e96b3;
+  --color4: #35789f;
+
+  --color5: #1997b2;
+  --color6: #327799;
+  --color7: #1997b0;
+  --color8: #23d2f5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,10 +32,33 @@ body {
 
   height: 100%;
   caret-color: transparent;
+  overflow-x: hidden;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/*************** custom scrollbar *************/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color6);
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: red;
 }

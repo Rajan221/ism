@@ -3,6 +3,10 @@ import heroCircle from "../../../public/heroCircle.png";
 import Image from "next/image";
 import "./styles/Hero.css";
 
+// flowbyte compnent
+import { Button } from "flowbite-react";
+//flowbyte component
+
 function Hero() {
   return (
     <div className="h-screen bg-slate-100  text-black " id="hero">
@@ -32,9 +36,10 @@ function Hero() {
               Gain valuable insights and expert advice tailored to your specific
               requirements.
             </div>
-            <div className=" bg-color2 grid place-items-center rounded-md w-fit p-3 mt-5 text-white">
+
+            <Button className="mt-10 pointer-events-auto">
               Book Free Consultation
-            </div>
+            </Button>
           </div>
         </div>
         <Image className="bg-contain h-96 w-96" src={hero} loading="lazy" />
